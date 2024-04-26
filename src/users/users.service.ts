@@ -11,24 +11,24 @@ import { Role } from './entities/role.enum';
 
 @Injectable()
 export class UsersService {
-    private readonly users: User[] = [
-        {
-            id: 1,
-            name: "Kasun",
-            username: "kasun",
-            password: "kasun",
-            roles: [Role.ADMIN]
-        },
-        {
-            id: 2,
-            name: "Nuwan",
-            username: "nuwan",
-            password: "nuwan",
-            roles: [Role.USER]
-        }
-    ]
+  private readonly users: User[] = [
+    {
+      id: 1,
+      name: 'Kasun',
+      username: 'kasun',
+      password: 'kasun',
+      roles: [Role.ADMIN],
+    },
+    {
+      id: 2,
+      name: 'Nuwan',
+      username: 'nuwan',
+      password: 'nuwan',
+      roles: [Role.USER],
+    },
+  ];
 
-    async findOne(username: string): Promise<User | undefined> {
-        return this.users.find(user=>user.username === username);
-    }
+  async findOne(username: string): Promise<User | undefined> {
+    return this.users.find((user) => user.username === username);
+  }
 }

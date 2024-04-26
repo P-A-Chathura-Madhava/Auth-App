@@ -8,14 +8,14 @@ import { JwtStrategy } from './jwt.strategy';
 
 @Module({
   imports: [
-    UsersModule, 
-    PassportModule, 
+    UsersModule,
+    PassportModule,
     JwtModule.register({
       secret: 'SECRET',
-      signOptions: {expiresIn: '2d'}
-    })
+      signOptions: { expiresIn: '2d' },
+    }),
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy],
-  exports: [AuthService]
+  exports: [AuthService],
 })
 export class AuthModule {}

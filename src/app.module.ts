@@ -13,8 +13,8 @@ import { RolesGuard } from './users/roles.guard';
     AppService,
     {
       provide: APP_GUARD,
-      useClass: RolesGuard
-    }
+      useClass: RolesGuard,
+    },
   ],
 })
 export class AppModule {}
